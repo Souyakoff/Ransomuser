@@ -19,7 +19,7 @@ fetch(endpoint)
 
         const tableBody = document.getElementById("usersTable");
         datas.results.forEach(user => {
-            const genderIcon = user.gender === "male" ? "<img src='../IMG/Male.png' alt='Male' style='width: 20px; height: 20px;'>" : "<img src='../IMG/female.png' alt='Female' style='width: 20px; height: 20px;'>";
+            const genderIcon = user.gender === "male" ? "<img src='IMG/Male.png' alt='Male' style='width: 20px; height: 20px;'>" : "<img src='IMG/female.png' alt='Female' style='width: 20px; height: 20px;'>";
             const lat = user.location.coordinates.latitude;
             const lon = user.location.coordinates.longitude;
 

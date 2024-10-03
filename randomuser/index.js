@@ -18,14 +18,15 @@ fetch(endpoint)
 
         const tableBody = document.getElementById("usersTable");
         datas.results.forEach(user => {  // Corrigé ici
-            tableBody.innerHTML += `
+            const genderIcon = user.gender === "male" ? "<img src='IMG/Male.png' alt='Male' style='width: 20px; height: 20px;'>" : "<img src='IMG/female.png' alt='Female' style='width: 20px; height: 20px;'>";
+                tableBody.innerHTML += `
                 <tr>
                     <td>${user.login.username}</td>
-                    <td>${user.gender}</td>
+                    <td>${genderIcon}</td>
                     <td>${user.name.last}</td>
                     <td>${user.name.first}</td>
                     <td>${user.email}</td>
-                    <td><img src="https://flagcdn.com/40x30/$%7Buser.nat.toLowerCase()%7D.png" alt="${user.location.country} flag"></td>
+                    <td><img src="https://flagcdn.com/w40/${user.nat.toLowerCase()}.png" alt="${user.location.country} flag"></td>
                     <td><img src="${user.picture.thumbnail}" alt="Photo de ${user.name.first}" /></td>
                 </tr>
             `;

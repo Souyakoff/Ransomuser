@@ -25,7 +25,7 @@ fetch(endpoint)
                     <td>${user.name.last}</td>
                     <td>${user.name.first}</td>
                     <td>${user.email}</td>
-                    <td>${user.location.country}</td>
+                    <td><img src="https://flagcdn.com/40x30/$%7Buser.nat.toLowerCase()%7D.png" alt="${user.location.country} flag"></td>
                     <td><img src="${user.picture.thumbnail}" alt="Photo de ${user.name.first}" /></td>
                 </tr>
             `;
